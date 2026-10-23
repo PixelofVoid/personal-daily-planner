@@ -14,6 +14,15 @@ Data stays on that device. Nothing is uploaded.
 
 ## Linux
 
+Download **[Planner-1.0.0.AppImage](https://github.com/PixelofVoid/personal-daily-planner/releases/download/v1.0.0/Planner-1.0.0.AppImage)** from [Releases](https://github.com/PixelofVoid/personal-daily-planner/releases/latest):
+
+```bash
+chmod +x Planner-1.0.0.AppImage
+./Planner-1.0.0.AppImage
+```
+
+If the AppImage cannot mount (`libfuse.so.2` missing), install FUSE 2 or run with `--appimage-extract-and-run`.
+
 From source (Node.js 18+):
 
 ```bash
@@ -23,29 +32,25 @@ npm install
 npm run desktop
 ```
 
-Build a portable AppImage:
+To build the AppImage yourself:
 
 ```bash
 npm run dist:linux
 bash scripts/install-appimage.sh
 ```
 
-GitHub rejects files over 100 MB, so AppImages are not stored in this repo. Attach `dist-linux/Planner-1.0.0.AppImage` to a GitHub Release after building.
-
-If an AppImage cannot mount (`libfuse.so.2` missing), install FUSE 2 or run with `--appimage-extract-and-run`.
-
 ## Android
 
-Build an APK:
+Download **[Planner-1.0.0.apk](https://github.com/PixelofVoid/personal-daily-planner/releases/download/v1.0.0/Planner-1.0.0.apk)** from [Releases](https://github.com/PixelofVoid/personal-daily-planner/releases/latest). Copy it to the phone and open it. Allow installing from that source if Android asks.
+
+Package name: `com.roni.planner`.
+
+To build the APK yourself:
 
 ```bash
 npm install
 npm run dist:apk
 ```
-
-Copy `dist-android/Planner.apk` to the phone and open it. Allow installing from that source if Android asks.
-
-Package name: `com.roni.planner`.
 
 Optional development: `npm start` and scan the QR code in Expo Go.
 
