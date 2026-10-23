@@ -1,0 +1,46 @@
+# dependencies
+node_modules/
+
+# Expo / Metro
+.expo/
+expo-env.d.ts
+.metro-health-check*
+
+# Build outputs (too large for GitHub; attach AppImage/APK to a Release)
+dist/
+dist-linux/
+dist-android/
+web-build/
+build/
+
+# Native machine-specific / secrets
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.keystore
+android/local.properties
+android/app/build/
+android/build/
+android/.gradle/
+keystore/
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# local env
+.env
+.env*.local
+
+# misc
+.DS_Store
+*.pem
+*.tsbuildinfo
+/ios
+AGENTS.md
+CLAUDE.md
